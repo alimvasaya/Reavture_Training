@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Registration Form</title>
+</head>
+<body>
+    <H1 style="text-align: center;">Student Registration Form</H1> <hr/>
+
+        <Label> Enter your First Name : </Label>                                                         
+        <input type="text" id="firstname" name="name" placeholder="Enter your First Name" required  minlength="5"/> <br/>
+        <Label> Enter your Last Name : </Label>                                                         
+        <input type="text" id="lastname" name="name" placeholder="Enter your Last Name" required  minlength="5"/> <br/>
+        <Label>Enter Age : </Label>
+        <input type="number" id="age" name="age" placeholder="Enter your Age"/><br/>
+        <label>Choose your Gender:</label>
+        <input type="radio" name="gender" value="female">Female
+        <input type="radio" name="gender" value="male">Male
+        <br/>
+        <label>Choose your Race:</label>
+        <input type="checkbox" name="Race" value="American Indian or Alaska Native">American Indian or Alaska Native
+        <input type="checkbox" name="Race" value="Asian:">Asian
+        <input type="checkbox" name="Race" value="Black or African American:">Black or African American
+        <input type="checkbox" name="Race" value="Hispanic or Latino:">Hispanic or Latino
+        <br/>
+        <label>Address 1</label>
+        <textarea rows="1" cols="20" required></textarea>
+        <br/>
+        <label>Address 2</label>
+        <textarea rows="1" cols="20" ></textarea>
+        <br/>
+        <label>City</label>
+        <textarea rows="1" cols="20" ></textarea>
+        <br/>
+        <label>State</label>
+        <input type="radio" name="State" value="Texas">Texas
+        <input type="radio" name="State" value="Illinois">Illinois
+        <input type="radio" name="State" value="New York">New York
+        <br/>
+        <label>County</label>
+        <textarea rows="1" cols="20" placeholder="County"></textarea>
+        <br/>
+        <label>Choose Your Hobbies:</label>
+        <input type="checkbox" name="hobby" value="Eat">Eat
+        <input type="checkbox" name="hobby" value="Sleep">Sleep
+        <input type="checkbox" name="hobby" value="Program" checked>Program
+        <input type="checkbox" name="hobby" value="Repeat">Repeat
+        <br/>
+        <label>Courses </label>
+        <select name="Courses">
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+            <option value="Javascript">Javascript</option>
+        </select>
+        <br/>
+        <label>Additonal Comments</label>
+        <textarea rows="5" cols="30" placeholder="comments"></textarea>
+        <br/>
+        <input type="submit" value="submit">    
+    </form>
+    
+</body>
+</html>
