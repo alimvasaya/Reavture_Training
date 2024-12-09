@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Froms Demo</title>
+</head>
+<body>
+    <h3 style="text-align: center;">Forms Demo</h3><hr/>
+    <!--<form action="/pathtotheAPI/endpoint/url" method="post">-->
+    <form>
+        <!-- input type -->
+        <Label>Your Name : </Label>                                                         
+        <input type="text" id="name" name="name" placeholder="Enter your Name" required  minlength="5"/> <br/>
+        <Label>Enter password : </Label>
+        <input type="password" id="password" placeholder="Enter your Password"/> <br/>
+        <Label>Enter Age : </Label>
+        <input type="number" id="age" name="age" placeholder="Enter your Age"/><br/>
+        <label>Choose your Gender:</label>
+        <input type="radio" name="gender" value="female" checked>Female
+        <input type="radio" name="gender" value="male">Male
+        <br/>
+        <label>Choose Your Hobbies:</label>
+        <input type="checkbox" name="hobby" value="Eat">Eat
+        <input type="checkbox" name="hobby" value="Sleep">Sleep
+        <input type="checkbox" name="hobby" value="Program" checked>Program
+        <input type="checkbox" name="hobby" value="Repeat">Repeat
+        <br/>
+        <label>Food </label>
+        <select name="food">
+            <option value="Italian">Italian</option>
+            <option value="French">French</option>
+            <option value="Indian">Indian</option>
+        </select>
+        <br/>
+        <br/>
+        <label>Food </label>
+        <select name="food" multiple>
+            <option value="Italian">Italian</option>
+            <option value="French">French</option>
+            <option value="Indian">Indian</option>
+        </select>
+        <br/>
+        <label>Some Comments</label>
+        <textarea rows="5" cols="50"></textarea>
+
+        <input type="submit" value="submit">    
+    </form>
+</body>
+</html>
