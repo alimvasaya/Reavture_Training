@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>To do List</title>
+    <script>
+        function AddtodoList(){
+            let newListItem = document.createElement("li");
+            let newItem = document.getElementById("text1");
+            newListItem.innerHTML = newItem.value;
+            let insertItem = document.getElementById("myUL");
+            insertItem.append(newListItem);
+            newItem.value = "";
+        }
+        function DeleteFromList(){
+            let newItem = document.getElementById("text1");
+            let CurrentItem = document.getElementById("myUL").getElementsByTagName("li");
+            for(let x = 0; x < CurrentItem.length; x++){
+                if(CurrentItem[x].innerText === newItem.value){
+                    CurrentItem[x].remove();
+                    break;
+                }
+            }
+            newItem.value = "";
+        }
+
+        function markitComplete(){
+            let newItem = document.getElementById("text1");
+            let CurrentItems = document.getElementById("myUL").getElementsByTagName("li");
+            for(let x =0; x < CurrentItems.length; x++){
+                if(CurrentItems[x].innerText == newItem.value){
+                    CurrentItems[x].style.color = "green";
+                    break;
+                }
+            }
+            newItem.value = "";
+        }
+        function EditListItem(){
+            let newItem = document.getElementById("text1");
+            let CurrentItems = document.getElementById("myUL").getElementsByTagName("li");
+            for(let x =0; x < CurrentItems.length; x++){
+                if(CurrentItems[x].innerText == newItem.value){
+                let previousValue = CurrentItems[x].innerText;
+                let newValue = prompt("Edit your item:", CurrentItems.innerText);
+                if(newValue){
+                    CurrentItems[x].innerText = newValue;
+                    CurrentItems[x].style.color = "red";
+                    setTimeout(()=>{
+                        CurrentItems[x].style.color = "black";
+                    }, 2000);
+                    alert(`${previousValue} has been updated to ${newValue}`);
+                }else{
+                    alert("No Changes were Made.");
+                }
+                    break;
+                }
+            }
+            newItem.value = "";
+        }
+
+    </script>
+</head>
+<body>
+    <h1>To Do List</h1>
+
+    <input placeholder="Type your item" ="text" id="text1"/>
+    <button onclick="AddtodoList()">Add to List</button>
+    <button onclick="DeleteFromList()" >Delete from List</button>
+    <button onclick="markitComplete()">Mark It Complete</button>
+    <button onclick="EditListItem()">Edit List Item</button>
+    <hr/>
+    <ul id="myUL">
+        <li>Pay the Bills</li>
+    </ul>
+</body>
+</html>
