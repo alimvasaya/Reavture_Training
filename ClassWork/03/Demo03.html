@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Demo 3</title>
+    <script>
+        function handleClick(){
+            //var x = document.getElementsByTagName("p")
+            var x = document.getElementsByClassName("p1");
+            var i;
+            for(i=0; i<x.length; i++)
+            alert(x[i].style.backgroundColor="red")
+        }
+    </script>
+</head>
+<body>
+    <h1>This is demo 3</h1>
+    <p class="p1">THis is first Para</p>
+    <p class="p2">this is second Para</p>
+    <button onclick="handleClick()">CLick Me</button>
+</body>
+</html>
